@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/menuFragment">
+
+    <fragment
+        android:id="@+id/menuFragment"
+        android:name="com.dev.files.MenuFragment"
+        android:label="fragment_menu"
+        tools:layout="@layout/fragment_menu" >
+        <action
+            android:id="@+id/action_menuFragment_to_imageFragment"
+            app:destination="@id/imageFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_pdfFragment"
+            app:destination="@id/pdfFragment" />
+        <action
+            android:id="@+id/action_menuFragment_to_zipFragment"
+            app:destination="@id/zipFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/imageFragment"
+        android:name="com.dev.files.ImageFragment"
+        android:label="fragment_image"
+        tools:layout="@layout/fragment_image" >
+        <action
+            android:id="@+id/action_imageFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/pdfFragment"
+        android:name="com.dev.files.PdfFragment"
+        android:label="fragment_pdf"
+        tools:layout="@layout/fragment_pdf" >
+        <action
+            android:id="@+id/action_pdfFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/zipFragment"
+        android:name="com.dev.files.ZipFragment"
+        android:label="fragment_zip"
+        tools:layout="@layout/fragment_zip" >
+        <action
+            android:id="@+id/action_zipFragment_to_menuFragment"
+            app:destination="@id/menuFragment" />
+    </fragment>
+</navigation>
